@@ -18,7 +18,6 @@ public record TransactionResponse(
         @NotNull
         LocalDateTime timestamp,
 
-        @NotBlank
         String location,
 
         @NotNull
