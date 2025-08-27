@@ -17,5 +17,4 @@ public record TransactionRequest(
         @NotNull
         LocalDateTime timestamp,
 
-        @NotNull
         String location) {}

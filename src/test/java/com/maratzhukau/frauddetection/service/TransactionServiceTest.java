@@ -42,12 +42,12 @@ public class TransactionServiceTest {
         Transaction expectedTransaction = new Transaction(ID, ACCOUNT_ID, AMOUNT, TIMESTAMP, LOCATION);
 
         when(transactionMapper.toEntity(transactionRequest)).thenReturn(transactionWithoutId);
-        when(transactionRepository.createTransaction(transactionWithoutId)).thenReturn(expectedTransaction);
+        when(transactionRepository.save(transactionWithoutId)).thenReturn(expectedTransaction);
 
         transactionService.processTransaction(transactionRequest);
 
         verify(transactionMapper, times(1)).toEntity(transactionRequest);
-        verify(transactionRepository, times(1)).createTransaction(transactionWithoutId);
+        verify(transactionRepository, times(1)).save(transactionWithoutId);
     }
 
     private Transaction buildTransactionWithoutId() {

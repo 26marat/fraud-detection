@@ -22,7 +22,7 @@ public class TransactionServiceImpl implements TransactionService {
     public TransactionResponse processTransaction(TransactionRequest transactionRequest) {
 
         Transaction transaction = transactionMapper.toEntity(transactionRequest);
-        Transaction result = transactionRepository.createTransaction(transaction);
+        Transaction result = transactionRepository.save(transaction);
 
         return transactionMapper.toResponse(result);
     }
