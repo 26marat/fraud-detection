@@ -30,6 +30,9 @@ public class TransactionServiceTest {
     @Mock
     private TransactionMapper transactionMapper;
 
+    @Mock
+    private FraudDetectionService fraudDetectionService;
+
     @InjectMocks
     private TransactionServiceImpl transactionService;
 
@@ -46,6 +49,7 @@ public class TransactionServiceTest {
 
         transactionService.processTransaction(transactionRequest);
 
+        verify(fraudDetectionService, times(1)).isFraudulent(transactionWithoutId);
         verify(transactionMapper, times(1)).toEntity(transactionRequest);
         verify(transactionRepository, times(1)).save(transactionWithoutId);
     }
