@@ -3,7 +3,7 @@
 # Transaction Data Population Script
 # This script creates a variety of transactions to test fraud detection
 
-BASE_URL="http://localhost:8080/transactions"
+BASE_URL="http://localhost:8080/fraud-detection/v1/transactions"
 CONTENT_TYPE="Content-Type: application/json"
 
 echo "Starting transaction data population..."

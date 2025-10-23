@@ -33,8 +33,8 @@ public class FraudDetectionServiceImpl implements FraudDetectionService {
         double fraudScore = getFraudScore(transaction);
         boolean isFraud = fraudScore >= FRAUD_SCORE_THRESHOLD;
         
-        logger.info("Transaction {} fraud analysis: score={}, isFraudulent={}", 
-                   transaction.getId(), fraudScore, isFraud);
+        logger.info("Transaction analysis for Account: {} fraud analysis: score={}, isFraudulent={}",
+                   transaction.getAccountId(), fraudScore, isFraud);
         
         return isFraud;
     }
