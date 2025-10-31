@@ -3,9 +3,7 @@
 - [Overview](#overview)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Prerequisites](#prerequisites)
-- [Installation & Setup](#installation--setup)
-- [Running the Application](#running-the-application)
+- [Installation & Setup](#installation-and-setup)
 - [Making POST Calls](#making-post-calls)
 - [Fraud Detection Rules](#fraud-detection-rules)
 - [Kafka Integration](#kafka-integration)
@@ -43,7 +41,7 @@ This application is meant to demo a fraud detection system used to identify susp
 | **Gradle** | Build automation |
 | **Docker Compose** | Containerization |
 
-## Prerequisites
+## Installation and Setup
 
 Before running this application, ensure you have the following installed:
 
@@ -52,8 +50,6 @@ Before running this application, ensure you have the following installed:
 - **A database management tool such as DBeaver (for viewing the transactions table) is recommended**
 
 ```
-
-## Installation & Setup
 
 ### 1. Clone the Repository
 
